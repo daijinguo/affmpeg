@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Affmpeg</string>
+
+    <string name="str001Config">实例: 配置信息</string>
+    <string name="str002SimpleLive">实例: 简单直播</string>
+
+    <string name="str02Config">Configuration</string>
+    <string name="str03Protocol">Protocol</string>
+    <string name="str04Format">Format</string>
+    <string name="str05Codec">Codec</string>
+    <string name="str06Filter">Filter</string>
+
+    <string name="str07abiInfo">ABI 信息</string>
+</resources>

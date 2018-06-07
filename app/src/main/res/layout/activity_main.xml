@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="dai.android.ffmpeg.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/spacer_medium"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/btn_1_ff_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str001Config" />
+
+        <Button
+            android:id="@+id/btn_2_ff_simpleLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str002SimpleLive" />
+
+    </LinearLayout>
+
+</ScrollView>

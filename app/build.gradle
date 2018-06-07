@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+
+        minSdkVersion 19
+        targetSdkVersion 27
+        buildToolsVersion '27.0.3'
+
+        versionCode 1
+        versionName "1.0"
+
+        applicationId "dai.android.ffmpeg"
+
+        externalNativeBuild {
+            // ## cmake build ##
+            ///cmake {
+            ///    cppFlags "-std=c++14 -frtti -fexceptions"
+            ///    //arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=gcc"
+            ///}
+        }
+
+        sourceSets {
+            main {
+                // open #### cmake build ####
+                //  use cmake build and must close
+                // ### ndk-build ###
+                /// jniLibs.srcDirs = ['jniLibs']
+            }
+        }
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+            //abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        // open #### cmake build ####
+        //  use cmake build and must close
+        // ### ndk-build ###
+        ///cmake {
+        ///    path "CMakeLists.txt"
+        ///}
+
+        // open ### ndk-build ###
+        //  use cmake build and must close
+        // #### cmake build ####
+        ndkBuild {
+            path "src/main/cpp/Android.mk"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+}
